@@ -1,0 +1,84 @@
+body {
+	background-color: #333;
+}
+.wrapper {
+	border: 2px solid #fff;
+	border-radius: 5px;
+	width: 400px;
+	margin: 40px auto 0 auto;
+	background-color: #fff;
+}
+
+.tasks__add {
+	width: 376px;
+	padding: 10px 5px 10px 5px;
+	margin: 5px;
+	font-size: 23px;
+	border-radius: 5px;
+}
+
+.task {
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid #000;
+	align-items: center;
+	position: relative;
+	padding: 0 10px 0 10px;
+}
+.text {
+	font-size: 23px;
+	color: brown;
+}
+.tasks__button {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.checkbox {
+	appearance: none;
+	position: absolute;
+}
+
+.fake{
+	content: '';
+	display: block;
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #000;
+	position: relative;
+	
+	z-index: 1;
+	border-radius: 4px;
+}
+.fake:before {
+	content: '';
+	display: block;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	background: url('../img/1.png') no-repeat;
+	background-size: 16px 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	opacity: 0;
+	transition: 0.2 ease-in;
+}
+
+.checkbox:checked + .fake:before {
+	opacity: 1;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+.renaming {
+	padding: 5px 0 5px 0;
+	font-size: 20px;
+	background-color:aliceblue;
+}
